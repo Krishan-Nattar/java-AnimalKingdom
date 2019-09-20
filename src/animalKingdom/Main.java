@@ -3,10 +3,10 @@ package animalKingdom;
 import java.util.*;
 
 public class Main {
-    public static void printVehicles(ArrayList<AbstractAnimal> animals, CheckAnimal tester) {
+    public static void printAnimals(ArrayList<AbstractAnimal> animals, CheckAnimal tester) {
         for (AbstractAnimal a : animals) {
             if (tester.test(a)) {
-                System.out.println();
+                System.out.println(a.getName());
             }
 
         }
@@ -60,6 +60,10 @@ public class Main {
         for (AbstractAnimal a : animalList) {
             System.out.println(a.getName() + " " + a.breath());
         }
+        System.out.println("*** ANIMALS WITH LUNGS ***");
+        printAnimals(animalList, a->a.breath().equals("Lungs"));
+
+
 
     }
 }
