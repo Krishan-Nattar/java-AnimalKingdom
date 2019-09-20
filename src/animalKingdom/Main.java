@@ -6,7 +6,7 @@ public class Main {
     public static void printAnimals(ArrayList<AbstractAnimal> animals, CheckAnimal tester) {
         for (AbstractAnimal a : animals) {
             if (tester.test(a)) {
-                System.out.println(a.getName());
+                System.out.println(a);
             }
 
         }
@@ -39,7 +39,7 @@ public class Main {
         animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
         System.out.println("*** ORDERING BY YEAR DESCENDING ***");
         for (AbstractAnimal a : animalList) {
-            System.out.println(a);
+            System.out.println(a.getName() + " " + a.getYear());
         }
         
         animalList.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));

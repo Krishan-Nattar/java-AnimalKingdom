@@ -31,7 +31,7 @@ public abstract class AbstractAnimal implements Animal {
 
     @Override
     public String toString() {
-        return this.name + " " + this.year;
+        return this.name + " " + this.year + " "  + this.breath() + " " + this.move() + " " + this.reproduce();
     }
 
 }
