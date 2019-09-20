@@ -35,7 +35,16 @@ public class Main {
         ArrayList<AbstractAnimal> animalList = new ArrayList<AbstractAnimal>(Arrays.asList(panda, zebra, koala, sloth, armadillo, raccoon, bigfoot, pigeon, peacock, toucan, parrot, swan, salmon, catfish, perch));
 
         //Listing descending order by year
+        System.out.println("*** ORDERING BY YEAR DESCENDING ***");
         animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
+
+        for (AbstractAnimal a : animalList) {
+            System.out.println(a);
+        }
+        
+        animalList.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
+
+        System.out.println("*** ORDERING BY NAME ALPHABETICALLY ***");
 
         for (AbstractAnimal a : animalList) {
             System.out.println(a);
