@@ -32,58 +32,58 @@ public class Main {
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
 
-        ArrayList<AbstractAnimal> animalList = new ArrayList<AbstractAnimal>(Arrays.asList(panda, zebra, koala, sloth, armadillo, raccoon, bigfoot, pigeon, peacock, toucan, parrot, swan, salmon, catfish, perch));
+        ArrayList<AbstractAnimal> animalList = new ArrayList<AbstractAnimal>(Arrays.asList(panda, zebra, koala, sloth,
+                armadillo, raccoon, bigfoot, pigeon, peacock, toucan, parrot, swan, salmon, catfish, perch));
 
-        //Listing descending order by year
-        
+        // Listing descending order by year
+
         animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
         System.out.println("*** ORDERING BY YEAR DESCENDING ***");
         for (AbstractAnimal a : animalList) {
             System.out.println(a.getName() + " " + a.getYear());
         }
         System.out.println();
-        animalList.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         System.out.println("*** ORDERING BY NAME ALPHABETICALLY ***");
         for (AbstractAnimal a : animalList) {
             System.out.println(a.getName());
         }
 
         System.out.println();
-        animalList.sort((a1,a2)-> a1.move().compareToIgnoreCase(a2.move()));
+        animalList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         System.out.println("*** ORDERING BY MOVEMENT ***");
         for (AbstractAnimal a : animalList) {
             System.out.println(a.getName() + " " + a.move());
         }
 
         System.out.println();
-        animalList.sort((a1,a2)-> a1.breath().compareToIgnoreCase(a2.breath()));
+        animalList.sort((a1, a2) -> a1.breath().compareToIgnoreCase(a2.breath()));
         System.out.println("*** ORDERING BY BREATHING ***");
         for (AbstractAnimal a : animalList) {
             System.out.println(a.getName() + " " + a.breath());
         }
         System.out.println();
         System.out.println("*** ANIMALS WITH LUNGS ***");
-        printAnimals(animalList, a->a.breath().equals("Lungs"));
+        printAnimals(animalList, a -> a.breath().equals("Lungs"));
 
         System.out.println();
         System.out.println("*** LUNGS AND 1758 ***");
-        printAnimals(animalList, a-> (a.breath().equals("Lungs")) && (a.getYear()==1758));
+        printAnimals(animalList, a -> (a.breath().equals("Lungs")) && (a.getYear() == 1758));
 
         System.out.println();
         System.out.println("*** LUNGS AND EGGS ***");
-        printAnimals(animalList, a-> (a.breath().equals("Lungs")) && (a.reproduce().equals("Eggs")));
+        printAnimals(animalList, a -> (a.breath().equals("Lungs")) && (a.reproduce().equals("Eggs")));
 
         System.out.println();
         System.out.println("*** 1758 ***");
-        printAnimals(animalList, a-> (a.getYear()==1758));
+        printAnimals(animalList, a -> (a.getYear() == 1758));
 
-        //Ordering alphabetically
-        
+        // Ordering alphabetically
+
         System.out.println();
         System.out.println("*** Alphabetical and Lungs ***");
-        animalList.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
-        printAnimals(animalList, a-> (a instanceof Mammal));
-        
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        printAnimals(animalList, a -> (a instanceof Mammal));
 
     }
 }
