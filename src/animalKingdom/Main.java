@@ -47,7 +47,13 @@ public class Main {
         System.out.println("*** ORDERING BY NAME ALPHABETICALLY ***");
 
         for (AbstractAnimal a : animalList) {
-            System.out.println(a);
+            System.out.println(a.getName());
+        }
+
+        animalList.sort((a1,a2)-> a1.move().compareToIgnoreCase(a2.move()));
+        System.out.println("*** ORDERING BY MOVEMENT ***");
+        for (AbstractAnimal a : animalList) {
+            System.out.println(a.getName() + " " + a.move());
         }
 
     }
