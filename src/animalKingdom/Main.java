@@ -34,7 +34,8 @@ public class Main {
 
         ArrayList<AbstractAnimal> animalList = new ArrayList<AbstractAnimal>(Arrays.asList(panda, zebra, koala, sloth, armadillo, raccoon, bigfoot, pigeon, peacock, toucan, parrot, swan, salmon, catfish, perch));
 
-        animalList.sort((a1, a2) -> a1.getYear() - a2.getYear());
+        //Listing descending order by year
+        animalList.sort((a1, a2) -> a2.getYear() - a1.getYear());
 
         for (AbstractAnimal a : animalList) {
             System.out.println(a);
