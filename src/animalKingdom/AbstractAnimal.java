@@ -36,6 +36,13 @@ public abstract class AbstractAnimal implements Animal
         return this.year;
     }
 
+    @Override
+    public String toString()
+    {
+        return this.name + " " +
+        this.year + "\n";
+    }
+
     
 
 //     All animals consume food the same way

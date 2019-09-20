@@ -36,12 +36,22 @@ public class Main
     Fish catfish = new Fish("Catfish", 1758);
     Fish perch = new Fish("Perch", 1758);
 
+    ArrayList <AbstractAnimal> animalList = new ArrayList<AbstractAnimal>(
+        Arrays.asList(panda,zebra,koala,sloth,armadillo,raccoon,bigfoot,pigeon,peacock,toucan,
+        parrot,swan,salmon,catfish,perch));
+
+        animalList.sort((a1,a2)-> a1.getYear() - a2.getYear());
+
 
     // System.out.println(panda.breath());
     // System.out.println(panda.move());
     // System.out.println(panda.reproduce());
     // System.out.println(panda.eat());
     // System.out.println(panda.getId());
+    for(AbstractAnimal a: animalList)
+    {
+        System.out.println(a);
+    }
     
     
     }
