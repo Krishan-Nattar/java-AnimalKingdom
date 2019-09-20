@@ -17,7 +17,7 @@ public class Fish extends AbstractAnimal
     @Override
     public String breath()
     {
-        return "Breathes with gills";
+        return "Gills";
     }
 
     @Override

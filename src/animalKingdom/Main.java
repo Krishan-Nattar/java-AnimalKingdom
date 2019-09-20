@@ -1,7 +1,20 @@
 package animalKingdom;
 
+import java.util.*;
+
 public class Main
 {
+    public static void printVehicles(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for(AbstractAnimal a: animals)
+        {
+            if(tester.test(a))
+            {
+                System.out.println();
+            }
+
+        }
+    }
     public static void main(String[] args) {
     
     Mammal panda = new Mammal("Panda", 1869);
@@ -24,11 +37,11 @@ public class Main
     Fish perch = new Fish("Perch", 1758);
 
 
-    System.out.println(panda.breath());
-    System.out.println(panda.move());
-    System.out.println(panda.reproduce());
-    System.out.println(panda.eat());
-    System.out.println(panda.getId());
+    // System.out.println(panda.breath());
+    // System.out.println(panda.move());
+    // System.out.println(panda.reproduce());
+    // System.out.println(panda.eat());
+    // System.out.println(panda.getId());
     
     
     }

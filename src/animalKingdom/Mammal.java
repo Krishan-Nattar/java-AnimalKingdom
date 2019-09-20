@@ -17,7 +17,7 @@ public class Mammal extends AbstractAnimal
     @Override
     public String breath()
     {
-        return "Breathes with lungs";
+        return "Lungs";
     }
 
     @Override

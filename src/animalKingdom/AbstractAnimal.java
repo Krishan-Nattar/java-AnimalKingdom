@@ -26,6 +26,16 @@ public abstract class AbstractAnimal implements Animal
         return this.id;
     }
 
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public int getYear()
+    {
+        return this.year;
+    }
+
     
 
 //     All animals consume food the same way
