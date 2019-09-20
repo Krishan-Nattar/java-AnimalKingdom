@@ -66,7 +66,8 @@ public class Main {
         System.out.println("*** LUNGS AND 1758 ***");
         printAnimals(animalList, a-> (a.breath().equals("Lungs")) && (a.getYear()==1758));
 
-
+        System.out.println("*** LUNGS AND EGGS ***");
+        printAnimals(animalList, a-> (a.breath().equals("Lungs")) && (a.reproduce().equals("Eggs")));
 
     }
 }
