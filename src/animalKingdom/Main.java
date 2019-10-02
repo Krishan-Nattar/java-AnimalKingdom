@@ -84,7 +84,6 @@ public class Main {
 
         System.out.println();
         System.out.println("*** Alphabetical and Mammals ***");
-        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimals(animalList, a -> (a instanceof Mammal));
 
     }
