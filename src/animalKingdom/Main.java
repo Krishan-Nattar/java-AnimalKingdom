@@ -56,6 +56,7 @@ public class Main {
             System.out.println(a.getName() + " " + a.move());
         }
 
+        // I think I added this on accident, but I'll keep it
         System.out.println();
         animalList.sort((a1, a2) -> a1.breath().compareToIgnoreCase(a2.breath()));
         System.out.println("*** ORDERING BY BREATHING ***");
@@ -78,10 +79,10 @@ public class Main {
         System.out.println("*** 1758 ***");
         printAnimals(animalList, a -> (a.getYear() == 1758));
 
-        // Ordering alphabetically
+        // Ordering alphabetically (Stretch)
 
         System.out.println();
-        System.out.println("*** Alphabetical and Lungs ***");
+        System.out.println("*** Alphabetical and Mammals ***");
         animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimals(animalList, a -> (a instanceof Mammal));
 
