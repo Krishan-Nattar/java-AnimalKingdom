@@ -76,7 +76,8 @@ public class Main {
         printAnimals(animalList, a -> (a.breath().equals("Lungs")) && (a.reproduce().equals("Eggs")));
 
         System.out.println();
-        System.out.println("*** 1758 ***");
+        System.out.println("*** 1758 and Alphabetized ***");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimals(animalList, a -> (a.getYear() == 1758));
 
         // Ordering alphabetically (Stretch)
